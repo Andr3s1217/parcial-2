@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <!-- Define la codificación, adapta la página a móviles y enlaza los estilos externos. -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Cuatro ejercicios interactivos de programación estructurada con JavaScript.">
+  <title>Parcial 2 - Andres Arroyaves</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Carga la lógica después de analizar el HTML. -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- Presenta el propósito de la actividad y orienta al usuario. -->
+  <header class="hero">
+    <div class="hero__content">
+      <p class="eyebrow">Parcial 2</p>
+      <h1>Fundamentos de programación</h1>
+      <p>Resuelve cuatro problemas sencillos con entradas, operaciones y resultados claros.</p>
+    </div>
+  </header>
+
+  <!-- Organiza los cuatro ejercicios en tarjetas independientes. -->
+  <main class="container">
+    <section class="intro" aria-labelledby="intro-title">
+      <h2 id="intro-title">Elige un ejercicio</h2>
+      <p>Completa los campos y presiona el botón para ver el resultado.</p>
+    </section>
+
+    <div class="exercise-grid">
+      <!-- Ejercicio 1: recibe un número y muestra su cubo. -->
+      <section class="card" aria-labelledby="cube-title">
+        <div class="card__heading"><span class="number-badge">01</span><div><p class="card__category">Operaciones</p><h2 id="cube-title">Cubo de un número</h2></div></div>
+        <p class="card__description">Eleva un número a la tercera potencia.</p>
+        <form id="cube-form" novalidate>
+          <label for="cube-number">Escribe un número</label>
+          <input id="cube-number" name="number" type="number" step="any" placeholder="Ej. 3" required>
+          <button type="submit">Calcular cubo</button>
+        </form>
+        <p class="result" id="cube-result" aria-live="polite">El resultado aparecerá aquí.</p>
+      </section>
+
+      <!-- Ejercicio 2: calcula el área con la base y la altura del triángulo. -->
+      <section class="card" aria-labelledby="triangle-title">
+        <div class="card__heading"><span class="number-badge">02</span><div><p class="card__category">Geometría</p><h2 id="triangle-title">Área de un triángulo</h2></div></div>
+        <p class="card__description">Ingresa la base y la altura en metros.</p>
+        <form id="triangle-form" novalidate>
+          <label for="triangle-base">Base (m)</label>
+          <input id="triangle-base" name="base" type="number" min="0" step="any" placeholder="Ej. 5.5" required>
+          <label for="triangle-height">Altura (m)</label>
+          <input id="triangle-height" name="height" type="number" min="0" step="any" placeholder="Ej. 8" required>
+          <button type="submit">Calcular área</button>
+        </form>
+        <p class="result" id="triangle-result" aria-live="polite">El resultado aparecerá aquí.</p>
+      </section>
+
+      <!-- Ejercicio 3: calcula el promedio de tres calificaciones y lo asocia al estudiante. -->
+      <section class="card" aria-labelledby="average-title">
+        <div class="card__heading"><span class="number-badge">03</span><div><p class="card__category">Calificaciones</p><h2 id="average-title">Promedio de calificaciones</h2></div></div>
+        <p class="card__description">Escribe el nombre y las tres calificaciones.</p>
+        <form id="average-form" novalidate>
+          <label for="student-name">Nombre del estudiante</label>
+          <input id="student-name" name="student" type="text" maxlength="80" placeholder="Ej. Juan Pérez" required>
+          <div class="input-row">
+            <div><label for="grade-one">Calificación 1</label><input id="grade-one" name="grade1" type="number" step="any" placeholder="Ej. 18" required></div>
+            <div><label for="grade-two">Calificación 2</label><input id="grade-two" name="grade2" type="number" step="any" placeholder="Ej. 16" required></div>
+          </div>
+          <label for="grade-three">Calificación 3</label>
+          <input id="grade-three" name="grade3" type="number" step="any" placeholder="Ej. 18" required>
+          <button type="submit">Calcular promedio</button>
+        </form>
+        <p class="result" id="average-result" aria-live="polite">El resultado aparecerá aquí.</p>
+      </section>
+
+      <!-- Ejercicio 4: compara dos valores y calcula cuánto difieren. -->
+      <section class="card" aria-labelledby="compare-title">
+        <div class="card__heading"><span class="number-badge">04</span><div><p class="card__category">Comparación</p><h2 id="compare-title">Compara dos valores</h2></div></div>
+        <p class="card__description">Descubre cuál es mayor, cuál es menor y su diferencia.</p>
+        <form id="compare-form" novalidate>
+          <label for="compare-first">Primer número</label>
+          <input id="compare-first" name="first" type="number" step="any" placeholder="Ej. 15" required>
+          <label for="compare-second">Segundo número</label>
+          <input id="compare-second" name="second" type="number" step="any" placeholder="Ej. 8" required>
+          <button type="submit">Comparar números</button>
+        </form>
+        <p class="result" id="compare-result" aria-live="polite">El resultado aparecerá aquí.</p>
+      </section>
+    </div>
+  </main>
+
+  <!-- Cierra la página con una referencia breve a las tecnologías usadas. -->
+  <footer><p>Práctica de programación estructurada <span aria-hidden="true">·</span> HTML, CSS y JavaScript</p></footer>
+</body>
+</html>
